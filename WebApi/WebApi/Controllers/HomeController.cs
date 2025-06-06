@@ -1,15 +1,16 @@
 using System.Diagnostics;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers;
 
 public class HomeController : Controller
 {
-    [HttpGet(template: nameof(Get))]
+    [HttpGet(template: nameof(GetApplicationById))]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> GetResourceTimeAllocationForCalendarAsync([FromQuery] GetResourceTimeAllocationForCalendarQuery filter)
+    public async Task<IActionResult> GetApplicationById([FromQuery] GetApplicationByIdQuery  filter)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 

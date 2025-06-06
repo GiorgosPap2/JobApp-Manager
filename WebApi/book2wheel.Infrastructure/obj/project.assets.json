@@ -1537,7 +1537,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MediatR": "12.2.0"
+          "MediatR": "12.2.0",
+          "book2wheel.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/book2wheel.Application.dll": {}
@@ -4286,12 +4287,6 @@
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file /Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/obj/project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1902",
       "level": "Warning",

@@ -47,6 +47,16 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "book2wheel.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/book2wheel.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/book2wheel.Domain.dll": {}
+        }
       }
     }
   },
@@ -112,11 +122,17 @@
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "book2wheel.Domain/1.0.0": {
+      "type": "project",
+      "path": "../book2wheel.Domain/book2wheel.Domain.csproj",
+      "msbuildProject": "../book2wheel.Domain/book2wheel.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "MediatR >= 12.2.0"
+      "MediatR >= 12.2.0",
+      "book2wheel.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -143,7 +159,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj": {
+              "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
