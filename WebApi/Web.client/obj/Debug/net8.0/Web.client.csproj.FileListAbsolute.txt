@@ -1,0 +1,12 @@
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/bin/Debug/net8.0/Web.client.deps.json
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/bin/Debug/net8.0/Web.client.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/bin/Debug/net8.0/Web.client.pdb
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/Web.client.GeneratedMSBuildEditorConfig.editorconfig
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/Web.client.AssemblyInfoInputs.cache
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/Web.client.AssemblyInfo.cs
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/Web.client.csproj.CoreCompileInputs.cache
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/Web.client.sourcelink.json
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/Web.client.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/refint/Web.client.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/Web.client.pdb
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/Debug/net8.0/ref/Web.client.dll

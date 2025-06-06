@@ -1,0 +1,13 @@
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/bin/Debug/net8.0/book2wheel.Application.deps.json
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/bin/Debug/net8.0/book2wheel.Application.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/bin/Debug/net8.0/book2wheel.Application.pdb
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/book2wheel.Application.csproj.AssemblyReference.cache
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/book2wheel.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/book2wheel.Application.AssemblyInfoInputs.cache
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/book2wheel.Application.AssemblyInfo.cs
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/book2wheel.Application.csproj.CoreCompileInputs.cache
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/book2wheel.Application.sourcelink.json
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/book2wheel.Application.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/refint/book2wheel.Application.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/book2wheel.Application.pdb
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/obj/Debug/net8.0/ref/book2wheel.Application.dll
