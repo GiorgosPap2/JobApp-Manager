@@ -43,6 +43,71 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/User/.dotnet/sdk/9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj",
+        "projectName": "book2wheel.Domain",
+        "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj",
+        "packagesPath": "/Users/User/.nuget/packages/",
+        "outputPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/User/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",
@@ -87,6 +152,9 @@
             "projectReferences": {
               "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/book2wheel.Application.csproj": {
                 "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/book2wheel.Application.csproj"
+              },
+              "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj": {
+                "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj"
               }
             }
           }
@@ -106,6 +174,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

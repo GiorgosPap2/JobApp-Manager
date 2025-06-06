@@ -3,6 +3,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { PopupManagerService } from '../../services/popup-manager.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { JobApplicationComponent } from '../job-application/job-application.component';
+import { ApplicationService } from '../../services/application.service';
 
 @Component({
   selector: 'app-job-listing',
@@ -14,14 +15,16 @@ export class JobListingComponent implements OnInit {
 
   dialogRef: MatDialogRef<JobApplicationComponent | any> | undefined;
   applied: boolean = false;
+  applicationId: string = '';
 
   constructor(private breakpointObserver: BreakpointObserver,
-              private popupManger: PopupManagerService
+              private popupManger: PopupManagerService,
+              private applicationService: ApplicationService
 ) { }
 
   ngOnInit() {}
 
-  apply() {
+  public apply(): void {
     this.dialogRef = this.popupManger.openJobApplicationPopup();
 
     if (!this.dialogRef) {
@@ -32,10 +35,22 @@ export class JobListingComponent implements OnInit {
     this.dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.applied = true;
+        this.applicationId = result;
       } else {
         console.log('Dialog was dismissed without a result');
+        this.applied = false;
       }
     });
   }
+
+  public getApplication(): void {
+    this.applicationService.getApplicationById(this.applicationId)
+      .then(response => {
+
+      })
+      .catch(error => {
+        console.error('Error fetching application:', error);
+      });
+  } 
 
 }

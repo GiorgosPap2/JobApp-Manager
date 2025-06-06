@@ -1,27 +1,30 @@
 <div class="container">
     <form [formGroup]="applicationForm">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" formControlName="name" class="form-control" required>
-        </div>
+        <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="name" required>
+        <mat-error *ngIf="applicationForm.get('name')?.hasError('required')">Name is required</mat-error>
+      </mat-form-field>
 
-        <div class="form-group">
-            <label for="surname">Surname</label>
-            <input type="text" id="surname" formControlName="surname" class="form-control" required>
-        </div>
+        <mat-form-field>
+          <mat-label>Surname</mat-label>
+          <input matInput type="text" formControlName="surname" required>
+          <mat-error *ngIf="applicationForm.get('surname')?.hasError('required')">Surname is required</mat-error>
+        </mat-form-field>
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" formControlName="email" class="form-control" required>
-        </div>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" required>
+          <mat-error *ngIf="applicationForm.get('email')?.hasError('required')">Email is required</mat-error>
+        </mat-form-field>
 
-        <div class="form-group">
-            <label for="comments">Comments</label>
-            <input type="text" id="comments" formControlName="comments" class="form-control" required>
-        </div>
+        <mat-form-field>
+          <mat-label>Comments</mat-label>
+          <input matInput type="text" formControlName="comments">
+        </mat-form-field>
     </form>
 
     <div class="form-group">
         <button (click)="submitApplication()" class="btn btn-primary" [disabled]="applicationForm.invalid">Submit</button>
-        <button (click)="dismiss()" class="btn btn-secondary">Reset</button>
+        <button (click)="dismiss()" class="btn btn-secondary">Return</button>
 </div>

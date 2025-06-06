@@ -5,29 +5,33 @@ import { JobApplicationComponent } from './components/job-application/job-applic
 import { ReactiveFormsModule } from '@angular/forms';
 import { PopupMessageComponent } from './components/popup-message/popup-message.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { ApplicationService } from './services/application.service';
+import { AppComponent } from './app.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  bootstrap: [JobListingComponent],
+  bootstrap: [AppComponent],
   declarations: [
+    AppComponent,
     JobListingComponent,
     JobApplicationComponent,
     PopupMessageComponent
   ],
   imports: [
     CommonModule,
+    MatInputModule,
     ReactiveFormsModule,
     MatDialogModule,
     BrowserModule,
-    HttpClientModule
   ],
   exports: [
     JobListingComponent
   ],
   providers: [
     ApplicationService,
+    provideHttpClient()
   ]
 })
 export class AppModule { }

@@ -48,7 +48,8 @@
   </div>
 
   <div class="buttons">
-    <button class="btn-apply" (click)="apply()"><i class="bi bi-send-arrow-down-fill"></i>Apply Now</button>
+    <button class="btn-apply" (click)="apply()" *ngIf="!applied"><i class="bi bi-send-arrow-down-fill"></i>Apply Now</button>
+    <button class="btn-get" (click)="getApplication()"><i class="bi bi-folder2-open"></i>Return</button>
   </div>
 
 </div>

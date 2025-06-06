@@ -4,7 +4,7 @@ import { AppModule } from "./app.module";
 
 @Component({
   selector: 'app-root',
-  imports: [ AppModule],
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
