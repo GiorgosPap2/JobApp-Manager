@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj",
+      "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj",
       "projectName": "book2wheel.Domain",
-      "projectPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj",
+      "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/book2wheel.Domain.csproj",
       "packagesPath": "/Users/User/.nuget/packages/",
-      "outputPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/book2wheel.Domain/obj/",
+      "outputPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/User/.nuget/NuGet/NuGet.Config"

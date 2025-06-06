@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/WebApi/Web.client/Web.client.csproj",
+      "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/Web.client.csproj",
       "projectName": "Web.client",
-      "projectPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/Web.client/Web.client.csproj",
+      "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/Web.client.csproj",
       "packagesPath": "/Users/User/.nuget/packages/",
-      "outputPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/Web.client/obj/",
+      "outputPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/Web.client/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/User/.nuget/NuGet/NuGet.Config"

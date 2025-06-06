@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/WebApi/book2wheel.Infrastructure/book2wheel.Infrastructure.csproj",
+      "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/book2wheel.Infrastructure.csproj",
       "projectName": "book2wheel.Infrastructure",
-      "projectPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/book2wheel.Infrastructure/book2wheel.Infrastructure.csproj",
+      "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/book2wheel.Infrastructure.csproj",
       "packagesPath": "/Users/User/.nuget/packages/",
-      "outputPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/book2wheel.Infrastructure/obj/",
+      "outputPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/User/.nuget/NuGet/NuGet.Config"
@@ -51,8 +51,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/User/Documents/CAREER/Erasmus/WebApi/book2wheel.Application/book2wheel.Application.csproj": {
-              "projectPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/book2wheel.Application/book2wheel.Application.csproj"
+            "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/book2wheel.Application.csproj": {
+              "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Application/book2wheel.Application.csproj"
             }
           }
         }

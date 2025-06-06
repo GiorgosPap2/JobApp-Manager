@@ -2752,11 +2752,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/WebApi/WebApi/WebApi.csproj",
+      "projectUniqueName": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/WebApi/WebApi.csproj",
+      "projectPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/WebApi.csproj",
       "packagesPath": "/Users/User/.nuget/packages/",
-      "outputPath": "/Users/User/Documents/CAREER/Erasmus/WebApi/WebApi/obj/",
+      "outputPath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/User/.nuget/NuGet/NuGet.Config"
