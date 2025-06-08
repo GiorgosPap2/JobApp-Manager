@@ -17,11 +17,15 @@ export class PopupMessageComponent {
     this.message = data.message;
   }
 
+  // This method checks if the message indicates a successful operation
+  //TODO: Enhance the logic to determine success or failure based on more specific criteria
   public isSuccess(): boolean {
     this.isSuccessful = true;
     return this.data.message.includes('successfully');
   }
 
+  // This method checks if the message indicates a failure
+  //TODOD: Enhance the logic to determine failure based on more specific criteria
   public isFailed(): boolean {
     this.isSuccessful = false;
     return this.data.message.includes('error');

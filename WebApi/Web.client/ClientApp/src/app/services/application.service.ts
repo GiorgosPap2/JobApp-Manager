@@ -26,11 +26,17 @@ export class ApplicationService {
     return response;
   }
 
+  /**
+   * Retrieves a job application by its ID.
+   * @param id The ID of the application to retrieve.
+   * @returns A promise that resolves with the application data.
+   */
   public getApplicationById(id: string): Promise<ApplicationViewModel> {
     let url = this.constructUrl(`getapplicationbyid?id=${id}`);
     return lastValueFrom(this.httpClient.get<ApplicationViewModel>(url));
   }
 
+  // Constructs the URL for the API endpoint.
   private constructUrl(extraEndpoints: string): string {
     return `${this.apiUrl}/${extraEndpoints}`;
   }

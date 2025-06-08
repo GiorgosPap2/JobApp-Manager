@@ -15,7 +15,7 @@ export class PopupManagerService {
   constructor(private dialog: MatDialog,
               private responsiveService: ResponsiveLayoutService) { }
 
-
+  // Opens the job application popup dialog.
   public openJobApplicationPopup(data?: any): MatDialogRef<JobApplicationComponent | any> | undefined {
     
     this.data = data;
@@ -27,6 +27,7 @@ export class PopupManagerService {
     return this.openDialog();
   }
 
+  //Open dialog operation for desktop
   private openDialog(): MatDialogRef<JobApplicationComponent | any> | undefined {
     const dialogConfig = new MatDialogConfig();
   
@@ -42,6 +43,7 @@ export class PopupManagerService {
     return this.dialogRef;
   }
 
+  //Open dialog operation for mobile/tablet
   private openDialogMobile() : MatDialogRef<JobApplicationComponent | any> | undefined{
     const dialogConfig = new MatDialogConfig();
   
@@ -57,6 +59,7 @@ export class PopupManagerService {
     return this.dialogRef;
   }
 
+  // Opens a popup message dialog with the provided message.
   public openDialogMessage(message: string): MatDialogRef<PopupMessageComponent | any> | undefined {
     const dialogConfig = new MatDialogConfig();
   

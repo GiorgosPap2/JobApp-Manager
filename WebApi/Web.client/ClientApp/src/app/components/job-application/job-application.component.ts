@@ -45,6 +45,10 @@ export class JobApplicationComponent implements OnInit{
     this.createModel = new applicationCreateModel();
   }
 
+  // This method is called when the form is submitted
+  // It maps the form values to the createModel and calls the service to submit the application
+  // If the submission is successful, it shows a success message and closes the dialog
+  // If there is an error, it shows an error message and closes the dialog
   public async submitApplication() {
     try {
       this.mapModel()
@@ -64,6 +68,7 @@ export class JobApplicationComponent implements OnInit{
       });
   }
 
+  // This method maps the form values to the createModel object
   private mapModel() {
     this.createModel.name = this.applicationForm.get('name')?.value;
     this.createModel.surname = this.applicationForm.get('surname')?.value;

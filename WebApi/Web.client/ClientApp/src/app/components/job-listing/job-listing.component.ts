@@ -23,6 +23,9 @@ export class JobListingComponent implements OnInit {
 
   ngOnInit() {}
 
+  // This method is called when the user clicks the "Apply" button
+  // It opens a dialog for the job application form
+  // If the dialog is closed with a result (id), it sets the applied flag to true and stores the application ID
   public apply(): void {
     let popupDialogRef = this.popupManger.openJobApplicationPopup();
 
@@ -44,6 +47,7 @@ export class JobListingComponent implements OnInit {
     });
   }
 
+  // This method retrieves the job application by its ID when the user clicks the "Show Application" button
   public getApplication(): void {
     this.applicationService.getApplicationById(this.applicationId)
       .then(response => {
