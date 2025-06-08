@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { ApplicationViewModel } from '../models/ApplicationViewModel';
+import { applicationCreateModel } from '../models/ApplicationCreateModel';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { ApplicationViewModel } from '../models/ApplicationViewModel';
 
 export class ApplicationService {
 
-  private apiUrl = 'https://api.example.com/applications'; 
+  private apiUrl = 'https://localhost:7222/api/application'; 
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,15 +19,15 @@ export class ApplicationService {
    * @param application The application data to be submitted.
    * @returns A promise that resolves with the response from the API.
    */
-  public async submitApplication(application: any): Promise<ApplicationViewModel> {
+  public async submitApplication(application: applicationCreateModel): Promise<string> {
     let url = this.constructUrl('createapplication'); 
-    const response = await lastValueFrom(this.httpClient.post<ApplicationViewModel>(url, application));
+    const response = await lastValueFrom(this.httpClient.post<string>(url, application));
     
     return response;
   }
 
   public getApplicationById(id: string): Promise<ApplicationViewModel> {
-    let url = this.constructUrl(`getapplication/${id}`);
+    let url = this.constructUrl(`getapplicationbyid?id=${id}`);
     return lastValueFrom(this.httpClient.get<ApplicationViewModel>(url));
   }
 

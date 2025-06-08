@@ -1,0 +1,86 @@
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.bi {
+  font-size: 2rem;
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.bi-file-earmark-check-fill {
+  color: #28a745;
+}
+
+.bi-file-earmark-x-fill {
+  color: #dc3545;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.btn-close {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-close:hover {
+  background: #5a6268;
+}
+
+.btn-close .bi {
+  font-size: 1rem;
+  margin: 0;
+  display: inline;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.25rem;
+  }
+  
+  .bi {
+    font-size: 2.5rem;
+  }
+  
+  .btn-close {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  h4 {
+    font-size: 1.4rem;
+  }
+  
+  .bi {
+    font-size: 3rem;
+  }
+  
+  .btn-close {
+    padding: 1rem 2rem;
+  }
+}

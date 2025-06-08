@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "PxcDPqzkj4M=",
+  "dgSpecHash": "h4E3WVCjlLQ=",
   "success": true,
   "projectFilePath": "/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/book2wheel.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/User/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/User/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
+    "/Users/User/.nuget/packages/fluentvalidation/12.0.0/fluentvalidation.12.0.0.nupkg.sha512",
+    "/Users/User/.nuget/packages/fluentvalidation.dependencyinjectionextensions/12.0.0/fluentvalidation.dependencyinjectionextensions.12.0.0.nupkg.sha512",
     "/Users/User/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/User/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
     "/Users/User/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",

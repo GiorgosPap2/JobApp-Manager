@@ -1,6 +1,10 @@
-﻿namespace book2wheel.Application;
+﻿using book2wheel.Application.Commands;
+using book2wheel.Domain.Models;
 
-public class IApplicationRepository
-{
-    
+namespace book2wheel.Application;
+
+public interface IApplicationRepository
+{ 
+    Task<JobApplicationViewModel> GetJobApplicationById(Guid id);
+    Task<Guid> CreateJobApplication(CreateJobApplicationCommand request);
 }

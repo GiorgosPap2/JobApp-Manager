@@ -10,17 +10,21 @@ import { PopupMessageComponent } from '../components/popup-message/popup-message
 export class PopupManagerService {
 
   public dialogRef!: MatDialogRef<JobApplicationComponent>;
+  public data: any;
 
   constructor(private dialog: MatDialog,
               private responsiveService: ResponsiveLayoutService) { }
 
 
-  public openJobApplicationPopup(): MatDialogRef<JobApplicationComponent | any> | undefined {
+  public openJobApplicationPopup(data?: any): MatDialogRef<JobApplicationComponent | any> | undefined {
+    
+    this.data = data;
 
-     if (this.responsiveService.isMobile() || this.responsiveService.isTablet()) 
-        return this.openDialogMobile();
-      else
-        return this.openDialog();
+    if (this.responsiveService.isMobile() || this.responsiveService.isTablet())
+      return this.openDialogMobile();
+    else
+
+    return this.openDialog();
   }
 
   private openDialog(): MatDialogRef<JobApplicationComponent | any> | undefined {
@@ -31,7 +35,7 @@ export class PopupManagerService {
     dialogConfig.panelClass = 'full-screen-modal';
     dialogConfig.width = 'auto';
     dialogConfig.height = 'auto';
-    dialogConfig.data = {};
+    dialogConfig.data = {data: this.data};
 
     this.dialogRef = this.dialog.open(JobApplicationComponent, dialogConfig);
 
@@ -46,7 +50,7 @@ export class PopupManagerService {
     dialogConfig.minWidth = '100%';
     dialogConfig.height = '100%';
     dialogConfig.panelClass = 'full-screen-modal';
-    dialogConfig.data = {};
+    dialogConfig.data = {data: this.data};
 
     this.dialogRef = this.dialog.open(JobApplicationComponent, dialogConfig);
 

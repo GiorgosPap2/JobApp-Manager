@@ -1,8 +1,12 @@
-<h4>{{message}}</h4>
+<div class="container">
+  
+  <h4>{{message}}</h4>
 
-<i class="bi bi-file-earmark-check-fill" *ngIf="isSuccess()"></i>
-<i class="bi bi-file-earmark-x-fill" *ngIf="isFailed()"></i>
+  <i class="bi bi-file-earmark-check-fill" *ngIf="isSuccess()"></i>
+  <i class="bi bi-file-earmark-x-fill" *ngIf="isFailed()"></i>
 
-<div class="buttons">
-  <button class="btn-close" (click)="dismiss()"><i class="bi bi-x-octagon-fill"></i>Close</button>
+  <div class="buttons">
+    <button class="btn-close" (click)="dismiss()"><i class="bi bi-x-octagon-fill"></i>Close</button>
+  </div>
+
 </div>

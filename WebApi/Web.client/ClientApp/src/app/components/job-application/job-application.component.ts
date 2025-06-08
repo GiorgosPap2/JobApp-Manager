@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { applicationCreateModel } from '../../models/ApplicationCreateModel';
 import { ApplicationService } from '../../services/application.service';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { PopupManagerService } from '../../services/popup-manager.service';
 
 @Component({
@@ -15,23 +15,32 @@ export class JobApplicationComponent implements OnInit{
 
   public applicationForm!: FormGroup;
   private createModel!: applicationCreateModel;
+  public values: any;
+  public disabled: boolean = false;
   
   constructor(private fb: FormBuilder,
               private applicationService: ApplicationService,
               private popupService: PopupManagerService,
-              private dialog: MatDialogRef<JobApplicationComponent,any>) {
+              private dialog: MatDialogRef<JobApplicationComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any) {
 
   }
 
   ngOnInit(): void {
-      this.applicationForm = this.fb.group(
+    this.values = this.data?.data;
+    this.applicationForm = this.fb.group(
       {
-        name: ['', [Validators.required, Validators.minLength(2)]],
-        surname: ['', [Validators.required, Validators.minLength(2)]],
-        email: ['', [Validators.required, Validators.email]],
-        comments: ['']
+        name: [this.values?.Name ?  this.values.Name : '', [Validators.required, Validators.minLength(2)]],
+        surname: [this.values?.Surname ?  this.values.Surname : '', [Validators.required, Validators.minLength(2)]],
+        email: [this.values?.Email ?  this.values.Email : '', [Validators.required, Validators.email]],
+        comments: [this.values?.Comments ?  this.values.Comments : '']
       }
-    )
+    );
+    if (this.values) {
+      this.disabled = true;
+    } else {
+      this.disabled = false;
+    }
 
     this.createModel = new applicationCreateModel();
   }
@@ -47,10 +56,11 @@ export class JobApplicationComponent implements OnInit{
     await this.applicationService.submitApplication(this.createModel)
       .then(response => {
         this.popupService.openDialogMessage('Application submitted successfully');
-        this.dismiss(response.id);
+        this.dismiss(response);
       })
       .catch(error => {
         this.popupService.openDialogMessage('Error submitting application: ' + error.message);
+        this.dismiss();
       });
   }
 

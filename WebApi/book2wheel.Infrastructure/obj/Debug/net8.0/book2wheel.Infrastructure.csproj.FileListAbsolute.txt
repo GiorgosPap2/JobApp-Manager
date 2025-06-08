@@ -16,3 +16,5 @@
 /Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/obj/Debug/net8.0/book2wheel.Infrastructure.pdb
 /Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/obj/Debug/net8.0/book2wheel.Infrastructure.genruntimeconfig.cache
 /Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/obj/Debug/net8.0/ref/book2wheel.Infrastructure.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/bin/Debug/net8.0/book2wheel.Domain.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/book2wheel.Infrastructure/bin/Debug/net8.0/book2wheel.Domain.pdb

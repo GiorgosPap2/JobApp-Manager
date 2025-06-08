@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { PopupManagerService } from '../../services/popup-manager.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
@@ -13,32 +13,33 @@ import { ApplicationService } from '../../services/application.service';
 })
 export class JobListingComponent implements OnInit {
 
-  dialogRef: MatDialogRef<JobApplicationComponent | any> | undefined;
-  applied: boolean = false;
-  applicationId: string = '';
+  public applied: boolean = false;
+  private applicationId: string = '';
 
-  constructor(private breakpointObserver: BreakpointObserver,
-              private popupManger: PopupManagerService,
-              private applicationService: ApplicationService
-) { }
+  constructor(private popupManger: PopupManagerService,
+              private applicationService: ApplicationService,
+              private changeDetector: ChangeDetectorRef)
+  { }
 
   ngOnInit() {}
 
   public apply(): void {
-    this.dialogRef = this.popupManger.openJobApplicationPopup();
+    let popupDialogRef = this.popupManger.openJobApplicationPopup();
 
-    if (!this.dialogRef) {
+    if (!popupDialogRef) {
       console.error('Dialog reference is undefined. Popup may not have opened correctly.');
       return;
     }
-    
-    this.dialogRef.afterClosed().subscribe(result => {
+
+    popupDialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.applied = true;
         this.applicationId = result;
+        this.changeDetector.detectChanges();
       } else {
         console.log('Dialog was dismissed without a result');
         this.applied = false;
+        this.changeDetector.detectChanges();
       }
     });
   }
@@ -46,7 +47,7 @@ export class JobListingComponent implements OnInit {
   public getApplication(): void {
     this.applicationService.getApplicationById(this.applicationId)
       .then(response => {
-
+        this.popupManger.openJobApplicationPopup(response);
       })
       .catch(error => {
         console.error('Error fetching application:', error);
