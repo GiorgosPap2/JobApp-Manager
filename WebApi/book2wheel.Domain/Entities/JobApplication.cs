@@ -10,4 +10,5 @@ public class JobApplication
     public required string Surname { get; set; }
     public required string Email { get; set; }
     public string? Comments { get; set; }
+    public virtual List<JobPosting> JobPostings { get; set; }
 }

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { ApplicationViewModel } from '../models/ApplicationViewModel';
 import { applicationCreateModel } from '../models/ApplicationCreateModel';
+import { JobPostingViewModel } from '../models/JobPostingViewModel';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { applicationCreateModel } from '../models/ApplicationCreateModel';
 
 export class ApplicationService {
 
-  private apiUrl = 'https://localhost:7222/api/application'; 
+  private apiUrl = 'https://localhost:7222/api'; 
 
   constructor(private httpClient: HttpClient) { }
 
@@ -20,7 +21,7 @@ export class ApplicationService {
    * @returns A promise that resolves with the response from the API.
    */
   public async submitApplication(application: applicationCreateModel): Promise<string> {
-    let url = this.constructUrl('createapplication'); 
+    let url = this.constructUrl('application', 'createapplication');
     const response = await lastValueFrom(this.httpClient.post<string>(url, application));
     
     return response;
@@ -32,12 +33,17 @@ export class ApplicationService {
    * @returns A promise that resolves with the application data.
    */
   public getApplicationById(id: string): Promise<ApplicationViewModel> {
-    let url = this.constructUrl(`getapplicationbyid?id=${id}`);
+    let url = this.constructUrl('application', `getapplicationbyid?id=${id}`);
     return lastValueFrom(this.httpClient.get<ApplicationViewModel>(url));
   }
 
+  public getJobPostingsById(Id: string): Promise<JobPostingViewModel> {
+    let url = this.constructUrl('posting', `getpostingbyid?id=${Id}`);
+    return lastValueFrom(this.httpClient.get<JobPostingViewModel>(url));
+  }
+
   // Constructs the URL for the API endpoint.
-  private constructUrl(extraEndpoints: string): string {
-    return `${this.apiUrl}/${extraEndpoints}`;
+  private constructUrl(controller: string, extraEndpoints: string): string {
+    return `${this.apiUrl}/${controller}/${extraEndpoints}`;
   }
 }

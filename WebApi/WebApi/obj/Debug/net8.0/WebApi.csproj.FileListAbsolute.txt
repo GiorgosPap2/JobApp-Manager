@@ -150,3 +150,6 @@
 /Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/bin/Debug/net8.0/WebApi.staticwebassets.endpoints.json
 /Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/obj/Debug/net8.0/staticwebassets.build.endpoints.json
 /Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/obj/Debug/net8.0/staticwebassets/msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/bin/Debug/net8.0/AngleSharp.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/bin/Debug/net8.0/AngleSharp.Css.dll
+/Users/User/Documents/CAREER/Erasmus/Erasmus/WebApi/WebApi/bin/Debug/net8.0/HtmlSanitizer.dll

@@ -2,3 +2,103 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  background-color: #f0f4f8 !important; 
+  margin: 0; 
+  min-height: 100vh; 
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h2 {
+    color: #343a40;
+    font-weight: 600;
+}
+
+.job-summary p {
+    color: #495057;
+    line-height: 1.6;
+}
+
+.list-objects h3 {
+    color: #212529;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.list-objects ul {
+    padding-left: 1.5rem;
+    color: #495057;
+}
+
+.list-objects li {
+    margin-bottom: 0.5rem;
+}
+
+.buttons {
+margin-top: 6rem;
+display: flex;
+gap: 1rem;
+}
+
+.btn-apply {
+    color: #f8f9fa;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    border-radius: 30px;
+
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-apply:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-get {
+    color: #f8f9fa;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    font-weight: 500;
+
+    border-radius: 30px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-get:hover {
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+i {
+    margin-right: 0.5rem;
+    color: #f8f9fa;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .btn-apply, .btn-save {
+        width: 100%;
+    }
+}

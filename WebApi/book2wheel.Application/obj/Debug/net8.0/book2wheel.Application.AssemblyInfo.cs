@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("book2wheel.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b42670d99d02989a4a63e2d61ba4655b34941720")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7cc168d7d2574b082dbf3df2b675d565d37955f")]
 [assembly: System.Reflection.AssemblyProductAttribute("book2wheel.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("book2wheel.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

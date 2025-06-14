@@ -1,9 +1,8 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { BreakpointObserver } from '@angular/cdk/layout';
 import { PopupManagerService } from '../../services/popup-manager.service';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { JobApplicationComponent } from '../job-application/job-application.component';
 import { ApplicationService } from '../../services/application.service';
+import { JobPostingViewModel } from '../../models/JobPostingViewModel';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-job-listing',
@@ -15,13 +14,21 @@ export class JobListingComponent implements OnInit {
 
   public applied: boolean = false;
   private applicationId: string = '';
+  public jobPosting!: JobPostingViewModel;
+
+  get sanitizedContent(): SafeHtml {
+    return this.domSanitizer.bypassSecurityTrustHtml(this.jobPosting?.PostingContent || '');
+  } 
 
   constructor(private popupManger: PopupManagerService,
               private applicationService: ApplicationService,
-              private changeDetector: ChangeDetectorRef)
+              private changeDetector: ChangeDetectorRef,
+              private domSanitizer: DomSanitizer)
   { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getJobPosting();
+  }
 
   // This method is called when the user clicks the "Apply" button
   // It opens a dialog for the job application form
@@ -58,4 +65,15 @@ export class JobListingComponent implements OnInit {
       });
   } 
 
+  // This method retrieves the job posting by its ID
+  private getJobPosting(): void {
+    this.applicationService.getJobPostingsById('A58B91FE-B845-4594-8514-398A67F8C54B') // Hardcoded for demo purposes
+      .then(response => {
+        this.jobPosting = response;
+      })
+      .catch(error => {
+        console.error('Error fetching job posting:', error);
+        this.jobPosting = {} as JobPostingViewModel; 
+      });
+  }
 }

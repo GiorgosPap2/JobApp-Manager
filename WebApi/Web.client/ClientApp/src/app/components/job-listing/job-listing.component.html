@@ -1,55 +1,16 @@
 <div class="container">
   <div class="header">
-    <h2>Job Title: Senior Software Engineer</h2>
-    <h2>Location: Remote</h2>
+    <h2>Job Title: {{jobPosting.JobTitle}}</h2>
+    <h2>Location: {{jobPosting.Location}}</h2>
   </div> 
-  <div class="main-body">
-    <div class="job-summary">
-      <p>We are looking for a Senior Software Engineer to join our team. The ideal candidate will have extensive experience in software development, a strong understanding of algorithms and data structures, and the ability to work collaboratively in a fast-paced environment.</p>
-    </div>
 
-    <div class="list-objects">
-      <h3>Responsibilities:</h3>
-      <ul>
-        <li>Design, develop, and maintain software applications.</li>
-        <li>Collaborate with cross-functional teams to define, design, and ship new features.</li>
-        <li>Ensure the performance, quality, and responsiveness of applications.</li>
-        <li>Identify and correct bottlenecks and fix bugs.</li>
-        <li>Help maintain code quality, organization, and automatization.</li>
-      </ul>
-
-      <h3>Requirements:</h3>
-      <ul>
-        <li>Bachelor's degree in Computer Science, Engineering, or a related field.</li>
-        <li>5+ years of experience in software development.</li>
-        <li>Strong understanding of algorithms and data structures.</li>
-        <li>Experience with version control systems (e.g., Git).</li>
-        <li>Excellent communication and teamwork skills.</li>
-      </ul>
-
-      <h3>Preferred Qualifications:</h3>
-      <ul>
-        <li>Proven experience as a Software Engineer or similar role.</li>
-        <li>Experience with Agile development methodologies.</li>
-        <li>Strong knowledge of programming languages such as Java, Python, or C#.</li>
-        <li>Familiarity with databases and web services.</li>
-        <li>Excellent problem-solving skills and attention to detail.</li>
-      </ul>
-
-      <h3>Benefits:</h3>
-      <ul>
-        <li>Competitive salary and performance bonuses.</li>
-        <li>Health, dental, and vision insurance.</li>
-        <li>Flexible working hours and remote work options.</li>
-        <li>Professional development opportunities.</li>
-        <li>Generous vacation and leave policies.</li>
-      </ul>
-    </div>
+  <div *ngIf="jobPosting">
+    <div [innerHTML]="sanitizedContent"></div>
   </div>
 
   <div class="buttons">
     <button class="btn-apply" (click)="apply()" *ngIf="!applied"><i class="bi bi-send-arrow-down-fill"></i>Apply Now</button>
     <button class="btn-get" (click)="getApplication()" *ngIf="applied"><i class="bi bi-folder2-open"></i>Show Application</button>
   </div>
-
 </div>
+

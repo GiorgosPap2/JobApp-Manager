@@ -21,4 +21,15 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Scripts\Add_JobApplication_down.sql" />
+      <EmbeddedResource Include="Scripts\Add_JobApplication_down.sql" />
+      <None Remove="Scripts\Add_JobApplication_up.sql" />
+      <EmbeddedResource Include="Scripts\Add_JobApplication_up.sql" />
+      <None Remove="Scripts\Add_JobPostingsEntity_down.sql" />
+      <EmbeddedResource Include="Scripts\Add_JobPostingsEntity_down.sql" />
+      <None Remove="Scripts\Add_JobPostingsEntity_up.sql" />
+      <EmbeddedResource Include="Scripts\Add_JobPostingsEntity_up.sql" />
+    </ItemGroup>
+
 </Project>
