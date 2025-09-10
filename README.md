@@ -14,4 +14,4 @@ Responsive web interface
 
 - Frontend: Angular, TypeScript
 - Backend: ASP.NET Core Web API
-- Database: SQL Server
+- Database: SQL Server ( containerized with docker )
